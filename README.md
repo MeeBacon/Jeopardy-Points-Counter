@@ -1,2 +1,2 @@
-# Jeopardy-Points-Counter
-Points counter for Jeopardy.
+# Points-Counter
+Points counter for anything.
