@@ -1,0 +1,4 @@
+.personList {
+    display: flex;
+    flex-wrap: wrap;
+}
