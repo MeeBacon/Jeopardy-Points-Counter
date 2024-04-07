@@ -9,8 +9,22 @@ html {
     flex-wrap: wrap;
 }
 
+/* Centers the player box and gives a width and height */
 .player {
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 15vw;
+    width: 15vw;
+    justify-content: space-evenly;
+}
+
+/* Removes margin from the h3 and p to make it prettier */
+.playerName, .points {
+    margin: 0;
+}
+
+/* Halves the point input to make it prettier */
+.pointValue {
+    width: 50%;
 }
