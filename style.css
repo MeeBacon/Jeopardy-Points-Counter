@@ -1,4 +1,16 @@
-.personList {
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Wraps player names on overflow */
+.playerList {
     display: flex;
     flex-wrap: wrap;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

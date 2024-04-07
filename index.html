@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
     <head>
 
         <title>Points Counter</title>
 
+        <link href="style.css" rel="stylesheet">
+
     </head>
 
     <body>
 
-        <form>
-            <label for="nameInput">Enter Name:</label>
-            <input type="text" id="nameInput">
-        </form>
+        <!-- Input for Player Name -->
+        <div>
+        
+            <form>
 
-        <button class="addPerson">Add Person</button>
+                <label for="nameInput">Enter Name:</label>
 
-        <div class="personList">
+                <input type="text" id="nameInput">
+
+            </form>
+
+            <button class="submitButton">Submit</button>
+        
+        </div>
+
+        <!-- This is where the players will be placed -->
+        <div class="playerList">
+
+            <!-- Delete later -->
+            <div class="player">
+
+                <h3 class="playerName">Player Name</h3>
+
+                <p class="points">Points</p>
+
+                <form>
+
+                    <label for="pointValue">Point Value:</label>
+
+                    <input type="text" id="pointValue">
+
+                </form>
+
+                <div class="addRemovePoints">
+
+                    <button>Add Points</button>
+                    <button>Subtract Points</button>
+
+                </div>
+
+            </div>
+            <!-- End delete later -->
 
         </div>
 
