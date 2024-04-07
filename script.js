@@ -32,10 +32,10 @@ function createPlayer() {
 
     //creates the add and subtract buttons
     var addButton = document.createElement("button");
-    addButton.setAttribute("onclick", "addPoints(" + playerCount + ")");
+    addButton.setAttribute("onclick", "changePoints(" + playerCount + ", 1)");
     addButton.innerHTML = "Add Points";
     var subtractButton = document.createElement("button");
-    subtractButton.setAttribute("onclick", "subtractPoints(" + playerCount + ")");
+    subtractButton.setAttribute("onclick", "changePoints(" + playerCount + ", -1)");
     subtractButton.innerHTML = "Subtract Points";
 
     var addSubtract = createNewElement("div", "addRemovePoints");
@@ -46,6 +46,8 @@ function createPlayer() {
     playerDiv.append(heading, pointsHTML, numberInputForm, addSubtract);
 
     document.getElementById("playerList").append(playerDiv);
+
+    document.getElementById("nameInput").value = "";
 
     playerCount += 1;
 
@@ -63,26 +65,16 @@ function createNewElement(element, elementClass="", elementID="", elementType=""
 
 }
 
-function addPoints(player) {
+function changePoints(player, multiplier) {
 
     var points = document.getElementById("pointValue" + player).value;
 
     var pointCounter = players[player].points;
 
-    players[player].points = parseInt(points) + parseInt(pointCounter);
+    players[player].points = parseInt(pointCounter) + (parseInt(points) * multiplier);
 
     document.getElementById("points" + player).innerHTML = players[player].points;
 
-}
-
-function subtractPoints(player) {
-
-    var points = document.getElementById("pointValue" + player).value;
-
-    var pointCounter = players[player].points;
-
-    players[player].points = parseInt(pointCounter) - parseInt(points);
-
-    document.getElementById("points" + player).innerHTML = players[player].points;
+    document.getElementById("pointValue" + player).value = "";
 
 }
