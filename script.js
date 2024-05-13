@@ -56,6 +56,8 @@ function createPlayer() {
 function createNewElement(element, elementClass="", elementID="", elementType="", elementFor="") {
 
     var newElement = document.createElement(element);
+
+    //sets different attributes of the element based on the input
     newElement.setAttribute("class", elementClass);
     newElement.setAttribute("id", elementID);
     newElement.setAttribute("type", elementType);
@@ -67,12 +69,14 @@ function createNewElement(element, elementClass="", elementID="", elementType=""
 
 function changePoints(player, multiplier) {
 
+    //gets the point value of player
     var points = document.getElementById("pointValue" + player).value;
 
+    //gets the player's point count from the list "players"
     var pointCounter = players[player].points;
 
+    //
     players[player].points = parseInt(pointCounter) + (parseInt(points) * multiplier);
-
     document.getElementById("points" + player).innerHTML = players[player].points;
 
     document.getElementById("pointValue" + player).value = "";
